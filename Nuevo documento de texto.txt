@@ -1,2 +1,3 @@
+npm i -g @angular/cli
 ng new platzi-store // Creación de nuevo proyecto de angular
 ng serve // inicia la aplicación de Angular sobre el puerto localhost:4200
