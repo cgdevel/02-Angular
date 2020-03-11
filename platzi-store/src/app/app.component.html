@@ -2,8 +2,8 @@
 {{ title }}
 
 
-
-
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
 
 <div *ngIf="title == 'carlos'">
     El div de Carlos
@@ -33,7 +33,7 @@
 -->
 
 <div class="product-grid">
-  <app-product *ngFor="let product of products" 
-                (producClicked)="clickProduct($event)" 
+  <app-product *ngFor="let product of products"
+                (producClicked)="clickProduct($event)"
                 [product]="product"></app-product>
 </div>
