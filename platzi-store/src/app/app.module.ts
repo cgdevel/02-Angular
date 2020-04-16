@@ -8,15 +8,14 @@ import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
 import { ExponentialPipe } from './exponential.pipe';
 import { HighlightsDirective } from './highlights.directive';
-import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
-import { BannerComponent } from './banner/banner.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -25,15 +24,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     CartComponent,
     ExponentialPipe,
     HighlightsDirective,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
-    BannerComponent,
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
