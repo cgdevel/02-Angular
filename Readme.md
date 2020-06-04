@@ -8,6 +8,12 @@ Framework de desarrollo web hecho por GOOGLE. Esta se hace en una sola página (
 npm i -g @angular/cli
 ```
 
+## Conceptos nuevos
+* ***Typescript***
+Es un subconjunto basado en Javascript y EcmaScript. Ayuda a la programación orientada a objetos en proyectos Javascript grandes.
+Permite ayudar a tipar los valores de las variables.
+OJO! = Aunque TypeScript es compative con Javascript, hay que compilarlo para que quede un archivo *js*
+
 ## Comandos básicos
 Para crear un nuevo proyecto
 ```
@@ -33,4 +39,9 @@ ng g s NombreServicio
 Re-instalación de los modulos usados en un proyecto
 ```
 npm install
+```
+
+Revisión de versiones instaladas
+```
+ng --vesion
 ```
