@@ -1,9 +1,9 @@
-# Introducción a (ANGULAR)[https://angular.io/]
+# Introducción a ANGULAR
 Framework de desarrollo web hecho por GOOGLE. Esta se hace en una sola página (*SPA*) y se hace de forma asincrona, reactiva y casí instantanea. Es exclusivamente para el front.
 
 ## Elementos
 * ***(Node.Js)[https://nodejs.org/es/]*** - Base para el framework
-* ***Instalación del cliente***
+* ***Instalación del (cliente)[https://angular.io/]***
 ```
 npm i -g @angular/cli
 ```
