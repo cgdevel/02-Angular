@@ -76,11 +76,78 @@ Dentro de otro módulo, se puede usar el componente creado, usando el valor dado
 <app-product></app-product>
 ```
 
+
+
+### Inputs (Propiedades)
+Un componente para recibir parametos usa inputs (props en Vue)
+```js
+export class ProductComponent {
+  @Input() product: Product;
+}
+```
+
+Dentro del componente padre, se hace referencia al input de la siguente forma
+```html
+export class ProductComponent {
+  <app-product [product]="produtoValores"></app-product>
+}
+```
+
+### Outputs (Eventos)
+Para que un componente padre reciba datos desde un componente hijo, se ocupan los eventos. Para eso, se tiene que importar los valores ***Output y EventEmitter***.
+
+Para declarar un output se tendria que hacer lo siguente:
+```js
+/* Dentro del archivo de la ts */
+import { Component, Input, Output, EventEmitter } from '@angular/core'; // Importar los elementso necesarios.
+...
+...
+...
+
+export class ProductComponent {
+  ...
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();     // Declaración del output
+...
+  addCart() {                                                           // Método que se dispara al momento de ejecutar un evento
+    console.log('Añadir al carrito');
+    this.productClicked.emit(this.product.id);                          // Variable que mandá al padre
+  }
+}
+
+```
+
+Dentro de la parte de la vista se declara de la siguente forma:
+```html
+<!--<button (evento)="método a ejecutar">Agregar al carrito</button>-->
+<button (click)="addCart()">Agregar al carrito</button>
+```
+
+Dentro del padre, la ejecución se recibe de la siguente forma:
+```js
+/* Dentro del archivo de la ts */
+
+export class AppComponent {
+  ...
+  ...
+  ...
+  clickProduct(id: number) {                                              // Evento que se ejecutará al momento de disparar el evento dentro del hijo
+    console.log('product');
+    console.log(id);
+  }
+}
+```
+
+De lado de la vista, se declara de la siguiente forma
+```html
+<!--<componente (Output declarado)="método a ejecutar($event)">Agregar al carrito</componente>-->
+<app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
+```
+
 ## Comandos básicos
 * Iniciar una instancia de servidor local
 ```
 ng serve              | Inicia servidor sobre localhost:4200
-ng serve --port XXXx  | Inicia servidor sobre localhost:XXXX
+ng serve --port XXXX  | Inicia servidor sobre localhost:XXXX
 ```
 
 * Compila la aplicación para subirla a un entordo productivo

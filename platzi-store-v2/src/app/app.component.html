@@ -1,8 +1,6 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
 
-<app-product></app-product>
-
 <!-- Ejemplo NgIf -->
 <div *ngIf="title==='charly'">
   este es un div
@@ -26,10 +24,14 @@
 </ul>
 
 <!-- Ejemplo NgFor Sobre un objeto tipado (interfaz) -->
-<div *ngFor="let product of productos">
+<!-- <div *ngFor="let product of productos">
   {{ product.title }}
   <img [src]="product.image" [alt]="product.title">
   {{ product.price }}
+</div> -->
+
+<!-- Ejemplo NgFor Sobre un componente con un input -->
+<div *ngFor="let product of productos">
+  <app-product  (productClicked)="clickProduct($event)"
+                [product]="product"></app-product>
 </div>
-
-
