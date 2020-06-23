@@ -31,7 +31,10 @@
 </div> -->
 
 <!-- Ejemplo NgFor Sobre un componente con un input -->
-<div *ngFor="let product of productos">
-  <app-product  (productClicked)="clickProduct($event)"
-                [product]="product"></app-product>
+<div class="product-grid">
+  <app-product
+      (productClicked)="clickProduct($event)"
+      [product]="product"
+      *ngFor="let product of productos">
+  </app-product>
 </div>

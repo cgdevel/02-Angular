@@ -15,6 +15,7 @@ import { EmitterVisitorContext } from '@angular/compiler';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss'],
 })
 // export class ProductComponent implements OnChanges, OnInit, DoCheck {
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
