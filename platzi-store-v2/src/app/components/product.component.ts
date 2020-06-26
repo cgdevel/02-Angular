@@ -21,10 +21,11 @@ import { EmitterVisitorContext } from '@angular/compiler';
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
-
   constructor() {
     console.log('1. constructor');
   }
+
+  today = new Date();
 
   // ngOnChanges(changes: SimpleChanges) {
   //   console.log('2. ngOnChanges');

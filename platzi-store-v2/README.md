@@ -154,3 +154,34 @@ ng serve --port XXXX  | Inicia servidor sobre localhost:XXXX
 ```
 ng build --prod       | Ser crea el compilado sobre la carpeta /dist listo para subir a producción
 ```
+
+* Crear un elemento de forma autómatica
+```
+ng create [tipo de elemento | c = Componente | p = pipe | d = directiva] [nombre del elemento]
+ng create c cart
+```
+
+* Revisa el código para evitar las malas practicas. Por ejemplo, errores de nomenclatura de variables, etc.
+```
+ng lint
+```
+
+## Pipes
+Son mascaras que le pueden aplicar a una variable. Equivalente a los ***Filtros*** en ***Vue.js***
+
+Se usan de la siguiente manera:
+```html
+<!-- 
+<h3>{{ Variable | Nombre del Pipe }}</h3>  
+-->
+<h3>{{ product.title | uppercase }}</h3>
+```
+
+## Directivas
+Sirven para modificar el dom de un elemento en especifico
+```html
+<!-- 
+<h3 NombreDelHighlight>Bla bla bla</h3>  
+-->
+<h3 appHighlight>Bla bla bla</h3>  
+```
