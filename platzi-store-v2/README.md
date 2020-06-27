@@ -185,3 +185,57 @@ Sirven para modificar el dom de un elemento en especifico
 -->
 <h3 appHighlight>Bla bla bla</h3>  
 ```
+
+## Ruteo
+Es acceder a secciones de la aplicación a traves de rutas. Tal como se hace en Vue.js (global.asax en asp.net)
+
+Las rutas se definen dentro del archivo ***app-routing.module***. La forma de agregar un componente a la tabla de ruteo es la siguiente:
+
+```js
+import { ProductComponent } from './components/product.component';
+
+const routes: Routes = [
+  /* Ruta "inicial" cuando viene vacio el path (OJO! Este hace una redirección al path que se indique) */
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  /* Instanciación de la ruta */
+  {
+    path: '/home',
+    component: ProductComponent,
+  },
+  /* Path cuando no se encuentra una ruta. (OJO! Tambien se puede redirección a algun componente, como en el path: '') */
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
+];
+```
+
+Para renderizar correctamente los elementos del ruteo, dentro del ***app.component*** se tiene agregar el elemento ***router-outlet***
+```html
+<router-outlet></router-outlet>
+```
+
+Para acceder a las rutas creadas se puede acceder haciendo uso del ***routerLink*** de la siguente manera:
+```html
+<!-- 
+<a  [routerLink]="['/routePath']"   
+    routerLinkActive="Clase que se le va aplicar cuando el link este 'activo'"
+    > XXXXXX </a>
+-->
+<nav>
+  <a [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
+</nav>
+```
+
+
+## Modulos especiales
+Una de las caracterisicas de Angular es la facilidad de modularizar la aplicación en componetes.
+
+Esistes algunos módulos especiales:
+
+* ***core***    - Guarda todos los servicio o componentes que vamos a ocupar en todos los demás modulos (Ej. El servicio de autenticación, ya que solo existe un módulo de autenticación).
+* ***shared***  - Guarda los componentes y servicios compartidos.
