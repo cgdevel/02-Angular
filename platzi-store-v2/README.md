@@ -157,7 +157,7 @@ ng build --prod       | Ser crea el compilado sobre la carpeta /dist listo para 
 
 * Crear un elemento de forma autómatica
 ```
-ng create [tipo de elemento | c = Componente | p = pipe | d = directiva] [nombre del elemento]
+ng create [tipo de elemento | c = Componente | p = pipe | d = directiva | s = servicio] [nombre del elemento]
 ng create c cart
 ```
 
@@ -205,6 +205,11 @@ const routes: Routes = [
   {
     path: '/home',
     component: ProductComponent,
+  },
+  /* Instanciación de la ruta con un parametro */
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent,
   },
   /* Path cuando no se encuentra una ruta. (OJO! Tambien se puede redirección a algun componente, como en el path: '') */
   {
