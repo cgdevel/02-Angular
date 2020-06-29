@@ -3,14 +3,11 @@ import {
   Input,
   Output,
   EventEmitter,
-  OnChanges,
-  SimpleChanges,
   OnInit,
   DoCheck,
   OnDestroy,
 } from '@angular/core';
-import { Product } from '../product.model';
-import { EmitterVisitorContext } from '@angular/compiler';
+import { Product } from './../../../product.model';
 
 @Component({
   selector: 'app-product',
