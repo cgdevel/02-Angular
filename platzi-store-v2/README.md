@@ -157,8 +157,8 @@ ng build --prod       | Ser crea el compilado sobre la carpeta /dist listo para 
 
 * Crear un elemento de forma autómatica
 ```
-ng create [tipo de elemento | c = Componente | p = pipe | d = directiva | s = servicio] [nombre del elemento]
-ng create c cart
+ng g [tipo de elemento | c = Componente | p = pipe | d = directiva | s = servicio | m = módulo | g = guardian] [nombre del elemento]
+ng g c cart
 ```
 
 * Revisa el código para evitar las malas practicas. Por ejemplo, errores de nomenclatura de variables, etc.
@@ -270,3 +270,13 @@ Las estádisticas dicen que el 77% de sitios tardan 10 segundos en cargar, y laz
 Para poder utilizar ***Lazy Loading*** es necesario ***modularizar*** la aplicación. Ver la carpeta de HOME para ver la modularización del componente.
 
 ***CADA MÓDULO GENERADO DEBE CONTAR CON SU PROPIO ROUTER***
+
+### Shared Module
+Es un componente que contiene los elementos que pueden ser compartidos entre los módulos.
+
+### Core Module
+Es un componente que tiene elementos que pueden ser usados en otros elementos. 
+
+La diferencia en el ***Shared Module*** y el ***Core Module*** radica en que el ***Shared Module*** tiene que ser importado para poder usar los elementos encapsulados en el, y el ***Core Module***, se "importa" de forma automatica.
+
+Una buena práctica puede ser, todas las cuestiones de artefactos graficos pueden estar en el ***Shared*** y todo lo relacionado a servicios pueden estar en el ***Core***
