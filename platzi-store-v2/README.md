@@ -280,3 +280,17 @@ Es un componente que tiene elementos que pueden ser usados en otros elementos.
 La diferencia en el ***Shared Module*** y el ***Core Module*** radica en que el ***Shared Module*** tiene que ser importado para poder usar los elementos encapsulados en el, y el ***Core Module***, se "importa" de forma automatica.
 
 Una buena práctica puede ser, todas las cuestiones de artefactos graficos pueden estar en el ***Shared*** y todo lo relacionado a servicios pueden estar en el ***Core***
+
+## Guardianes
+Los guardianes nos ayudan a ponerle una capa de seguridad a la aplicación para permitir o negar el acceso a una sección de la aplicación.
+
+Existen 4 tipos de guards que podemos usar:
+* ***CanActivate***: Mira si el usuario puede acceder a una página determinada.
+
+* ***CanActivateChild***: Mira si el usuario puede acceder a las páginas hijas de una determinada ruta.
+
+* ***CanDeactivate***: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de comfirmación, si el usuario tiene cambios sin guardar.
+
+* ***CanLoad***: Sirve para evitar que la aplicación cargue los módulos perezosamente si el usuario no está autorizado a hacerlo.
+
+Para más detalle de los Guardianes, puedes entrar [aquí](https://codingpotions.com/angular-seguridad).
