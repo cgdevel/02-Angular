@@ -294,3 +294,11 @@ Existen 4 tipos de guards que podemos usar:
 * ***CanLoad***: Sirve para evitar que la aplicación cargue los módulos perezosamente si el usuario no está autorizado a hacerlo.
 
 Para más detalle de los Guardianes, puedes entrar [aquí](https://codingpotions.com/angular-seguridad).
+
+## Material Design
+[Material Design](https://material.angular.io/) es el lenguaje de diseño de las interfaces de Google, y como Angular es una implemntación de Google, la instalación se hace de la siguiente manera:
+
+´´´
+ng add @angular/material
+´´´
+
