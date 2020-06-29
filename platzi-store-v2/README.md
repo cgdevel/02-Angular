@@ -234,6 +234,15 @@ Para acceder a las rutas creadas se puede acceder haciendo uso del ***routerLink
 <nav>
   <a [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
 </nav>
+
+<!-- 
+<a  [routerLink]="['/routePath', Parámetros]"   
+    routerLinkActive="Clase que se le va aplicar cuando el link este 'activo'"
+    > XXXXXX </a>
+-->
+<nav>
+  <a [routerLink]="['/products', product.id]">Ver detalle</a>
+</nav>
 ```
 
 
