@@ -253,3 +253,20 @@ Esistes algunos módulos especiales:
 
 * ***core***    - Guarda todos los servicio o componentes que vamos a ocupar en todos los demás modulos (Ej. El servicio de autenticación, ya que solo existe un módulo de autenticación).
 * ***shared***  - Guarda los componentes y servicios compartidos.
+
+## Lazy Loading
+Es una técnica que permite fragmentar el código para que cargue más rapido.
+
+Un archivo de Javascript, para que sea util para el navegador debe pasar por 4 pasos:
+1. Descargar
+2. Parsear
+3. Compilar
+4. Ejecutar
+
+![Pasos de Javascript](https://developers.google.com/web/updates/2018/08/images/web-performance-made-easy/js-processing.png?hl=es)
+
+Las estádisticas dicen que el 77% de sitios tardan 10 segundos en cargar, y lazy loading nos ayuda a reducir este tiempo de descarga.
+
+Para poder utilizar ***Lazy Loading*** es necesario ***modularizar*** la aplicación. Ver la carpeta de HOME para ver la modularización del componente.
+
+***CADA MÓDULO GENERADO DEBE CONTAR CON SU PROPIO ROUTER***
