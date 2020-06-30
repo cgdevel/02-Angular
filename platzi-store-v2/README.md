@@ -302,3 +302,9 @@ Para más detalle de los Guardianes, puedes entrar [aquí](https://codingpotions
 ng add @angular/material
 ´´´
 
+## Flexbox Grid
+Para el proyecto se ocupa Flexbox Grid para la distribución en mallas (tipo bootstrap)
+
+´´´
+npm i flexboxgrid --save
+´´´
