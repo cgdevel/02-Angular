@@ -157,8 +157,8 @@ ng build --prod       | Ser crea el compilado sobre la carpeta /dist listo para 
 
 * Crear un elemento de forma autómatica
 ```
-ng g [tipo de elemento | c = Componente | p = pipe | d = directiva | s = servicio | m = módulo | g = guardian] [nombre del elemento]
-ng g c cart
+ng g [tipo de elemento | c = Componente | p = pipe | d = directiva | s = servicio | m = módulo | g = guardian] [nombre del elemento] [--routing | cuando se genera un módulo y se agrega esta opción, tambien genera el routing]
+ng g c cart [--routing]
 ```
 
 * Revisa el código para evitar las malas practicas. Por ejemplo, errores de nomenclatura de variables, etc.
@@ -300,6 +300,18 @@ Para más detalle de los Guardianes, puedes entrar [aquí](https://codingpotions
 
 ´´´
 ng add @angular/material
+´´´
+
+El CDK de Material Design perime crear esquemáticos de forma más sencilla.
+´´´
+ng add @angular/cdk
+´´´
+
+Una forma de generar un componente usando el CDK es de la siguente forma.
+´´´
+ng generate @angular/material:[tipo de formilario | address-form | nav] [Ruta de donde se va a crear un componete]
+ng generate @angular/material:address-form admin/components/product-form
+ng generate @angular/material:address-form admin/components/product-form
 ´´´
 
 ## Flexbox Grid

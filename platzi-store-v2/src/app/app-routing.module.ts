@@ -37,14 +37,19 @@ const routes: Routes = [
         loadChildren: () =>
           import('./demo/demo.module').then((m) => m.DemoModule),
       },
-      {
-        path: '**',
-        loadChildren: () =>
-          import('./page-not-found/page-not-found-routing.module').then(
-            (m) => m.PageNotFoundRoutingModule
-          ),
-      },
     ],
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./page-not-found/page-not-found-routing.module').then(
+        (m) => m.PageNotFoundRoutingModule
+      ),
   },
 ];
 
