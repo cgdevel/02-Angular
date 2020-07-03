@@ -314,6 +314,32 @@ ng generate @angular/material:address-form admin/components/product-form
 ng generate @angular/material:address-form admin/components/product-form
 ´´´
 
+## Enviroment y Conexión a servicios
+Para la conexión a servicios web, se necesita importar ***HttpClientModule*** en el archivo ***app.module.ts*** para que se pueda usar el cliente.
+´´´js
+import { HttpClientModule } from '@angular/common/http'
+´´´
+
+Dentro del archivo donde se ejecutan las consultas al servicio se necesita importar ***HttpClient***, la buena practica indica que el archivo que ejecuta las conexión al servicio, se encuentra dentro del ***core.module***.
+´´´js
+import { HttpClient } from '@angular/common/http';
+´´´
+
+El enviroment es el archivo donde se guardan los datos que no cambian, como las rutas de conexión a los servicios web.
+´´´js
+import { environment } from '../../../../environments/environment';
+´´´
+
+### Tipos de consultas
+
+#### Get
+
+#### Post
+
+#### Put
+
+#### Delete
+
 ## Flexbox Grid
 Para el proyecto se ocupa Flexbox Grid para la distribución en mallas (tipo bootstrap)
 
