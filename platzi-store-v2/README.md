@@ -346,3 +346,17 @@ Para el proyecto se ocupa Flexbox Grid para la distribución en mallas (tipo boo
 ´´´
 npm i flexboxgrid --save
 ´´´
+
+## Ambiantes
+En angular se pueden manejar 2 tipos de ambiende forma tradicional, pruebas y producción. Pero se puede manejar un tercer ambiente que es desarrollo (local).
+
+* Publicación en producción
+´´´
+ng build --prod
+´´´
+
+* Publicación en algún ambiente diferente al productivo
+´´´
+ng build -c=[Nombre del ambiente]
+ng build -c=stag
+´´´
