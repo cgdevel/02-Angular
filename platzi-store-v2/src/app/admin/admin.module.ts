@@ -9,15 +9,21 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
 
 import { MaterialModule } from '../material/material.module';
-
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent],
+  declarations: [
+    ProductFormComponent,
+    NavComponent,
+    TableComponent,
+    DashboardComponent,
+    ProductsListComponent,
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-  ]
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}
