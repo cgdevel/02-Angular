@@ -360,3 +360,5 @@ ng build --prod
 ng build -c=[Nombre del ambiente]
 ng build -c=stag
 ´´´
+ ## Formularios reactivos
+ Los formularios reactivos son diferentes. Son más potentes de que los simples FormModule. Ya que permite realizar pruebas unitarios, colocar validaciones y permite que la logica se encuentre dentro del controlador y no sobre el Template.
