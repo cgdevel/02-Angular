@@ -362,3 +362,52 @@ ng build -c=stag
 ´´´
  ## Formularios reactivos
  Los formularios reactivos son diferentes. Son más potentes de que los simples FormModule. Ya que permite realizar pruebas unitarios, colocar validaciones y permite que la logica se encuentre dentro del controlador y no sobre el Template.
+
+### FormBuilder
+Constructor de formularios en base a un jSon creado.
+´´´
+import { FormBuilder } from '@angular/forms';
+...
+this.form = this.formBuilder.group({
+    jSons
+  });
+...
+´´´
+
+### FormGroup
+Es donde se arma el formulario en base al form builder.
+´´´
+import { FormBuilder } from '@angular/forms';
+...
+this.form = this.formBuilder.group({
+    jSons
+  });
+...
+´´´
+
+´´´html
+<form [formGroup]="form">
+  <mat-form-field>
+    <input formControlName="id" matInput type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <input formControlName="title" matInput type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <input formControlName="price" matInput type="number">
+  </mat-form-field>
+  <mat-form-field>
+    <input formControlName="description" matInput type="text">
+  </mat-form-field>
+</form>
+´´´
+
+### Validator
+Componente que permite agregar validacines dentro del form builder
+```
+import { Validators } from '@angular/forms';
+  ...
+  this.form = this.formBuilder.group({
+      id: ['', [Validators.required]],
+  ...
+```
